@@ -1,0 +1,14 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name:  holavite-route
+  namespace: devopsdummy
+  labels:
+    app:  holavite
+spec:
+  host: devopsdummyvite .apps.preprodalcaldia.medellin.gov.co
+  port:
+    targetPort: 3000
+  to:
+    kind: Service
+    name: holavite-service

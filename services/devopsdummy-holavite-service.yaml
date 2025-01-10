@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name:  holavite-service
+  namespace: devopsdummy
+  labels:
+    app:  holavite
+spec:  
+  selector:
+    app: holavite
+  # Tener presene como exponer el service https://docs.openshift.com/container-platform/3.11/dev_guide/expose_service/index.html
+  # Services Type: ClusterIP, ExternalName, NodePort o LoadBalancer
+  ports:
+  - port: 3000
+    protocol: TCP
+    targetPort: 3000
