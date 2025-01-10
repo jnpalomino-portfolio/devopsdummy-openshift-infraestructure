@@ -1,0 +1,23 @@
+name: $(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - main
+      - preprod
+  paths:
+    exclude:
+      - deployments/*
+      - README.md
+      - .gitignore
+
+resources:
+  repositories:
+    - repository: infraestructura
+      type: git
+      name: devops-pipeline-openshiftApply
+      ref: $(Build.SourceBranchName)
+
+stages:
+  - template: master-azure-pipelines.yaml@infraestructura
