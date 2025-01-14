@@ -15,9 +15,10 @@ spec:
       labels:
         app:  holavite
     spec:
+      serviceAccountName: sa-devopsdummy
       containers:
       - name:  holavite
-        image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-react-subpage-mfe-frontend-preprod:latest
+        image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-react-holavite-mfe-frontend-preprod:latest
         resources:
           requests:
             cpu: 100m #consumo de cpu del servicio
