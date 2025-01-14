@@ -1,14 +1,16 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name:  holavite
+  name:  devopsdummy-react-holavite-mfe-frontend-route
   namespace: devopsdummy
   labels:
-    app:  holavite
+    app:  devopsdummy
+    tecnologia: react
+    tipo: frontend
 spec:
-  host: devopsdummyvite.apps.preprodalcaldia.medellin.gov.co
+  host: devopsdummyholavite.apps.preprodalcaldia.medellin.gov.co
   port:
     targetPort: 3000
   to:
     kind: Service
-    name: holavite
+    name: devopsdummy-react-holavite-mfe-frontend-service
