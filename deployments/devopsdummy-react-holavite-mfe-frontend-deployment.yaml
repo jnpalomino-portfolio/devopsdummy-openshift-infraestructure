@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:  devopsdummy-react-holavite-mfe-frontend-deployment
+  name:  holavite
   namespace: devopsdummy
   labels:
-    app:  devopsdummy
+    app:  holavite
     tecnologia: react
     tipo: frontend
 spec:
   selector:
     matchLabels:
-      app: devopsdummy
+      app: holavite
   replicas: 1
   template:
     metadata:
       labels:
-        app:  devopsdummy
+        app:  holavite
         tecnologia: react
         tipo: frontend
     spec:
       serviceAccountName: sa-devopsdummy
       containers:
-      - name:  devopsdummy-react-holavite-mfe-frontend
+      - name:  holavite
         image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-react-holavite-mfe-frontend-preprod:latest
         resources:
           requests:

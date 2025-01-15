@@ -8,7 +8,7 @@ metadata:
     tecnologia: astro
     tipo: frontend
 spec:
-  host: devopsdummyprincipal.apps.preprodalcaldia.medellin.gov.co
+  host: devopsdummyprincipal-mfe.apps.preprodalcaldia.medellin.gov.co
   port:
     targetPort: 8007
   to:

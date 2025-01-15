@@ -1,10 +1,10 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name:  devopsdummy-react-holavite-mfe-frontend-route
+  name:  holavite
   namespace: devopsdummy
   labels:
-    app:  devopsdummy
+    app:  holavite
     tecnologia: react
     tipo: frontend
 spec:
@@ -13,4 +13,4 @@ spec:
     targetPort: 3000
   to:
     kind: Service
-    name: devopsdummy-react-holavite-mfe-frontend-service
+    name: holavite
