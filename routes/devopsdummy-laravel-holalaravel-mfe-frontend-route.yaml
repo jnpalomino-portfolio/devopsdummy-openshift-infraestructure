@@ -1,0 +1,16 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name:  devopsdummy-laravel-holalaravel-mfe-frontend-route
+  namespace: devopsdummy
+  labels:
+    app:  devopsdummy
+    tecnologia: laravel
+    tipo: frontend
+spec:
+  host: devopsdummyholalaravelmfe.apps.preprodalcaldia.medellin.gov.co
+  port:
+    targetPort: 8009
+  to:
+    kind: Service
+    name: devopsdummy-laravel-holalaravel-mfe-frontend-service

@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:  devopsdummy-astro-principal-mfe-frontend-deployment
+  name:  devopsdummy-laravel-holalaravel-mfe-frontend-deployment
   namespace: devopsdummy
   labels:
     app:  devopsdummy
-    tecnologia: astro
+    tecnologia: laravel
     tipo: frontend
 spec:
   selector:
@@ -16,13 +16,20 @@ spec:
     metadata:
       labels:
         app:  devopsdummy
-        tecnologia: astro
+        tecnologia: laravel
         tipo: frontend
     spec:
       serviceAccountName: sa-devopsdummy
       containers:
-      - name:  devopsdummy-astro-principal-mfe-frontend
-        image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-astro-principal-mfe-frontend-preprod:latest
+      - name:  devopsdummy-laravel-holalaravel-mfe-frontend
+        image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-laravel-holalaravel-mfe-frontend-preprod:latest
+        readinessProbe:
+          tcpSocket:
+            port: 8009        # Puerto de tu aplicación
+          initialDelaySeconds: 60
+          timeoutSeconds: 3
+          periodSeconds: 10
+          failureThreshold: 3
         resources:
           requests:
             cpu: 100m #consumo de cpu del servicio
@@ -31,7 +38,4 @@ spec:
             cpu: 100m
             memory: 2500Mi
         ports:
-        - containerPort:  8007
-        env:
-        - name: NODE_ENV
-          value: "production"
+        - containerPort:  8009

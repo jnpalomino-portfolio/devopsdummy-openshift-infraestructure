@@ -13,4 +13,4 @@ spec:
     targetPort: 3000
   to:
     kind: Service
-    name: holavite
+    name: devopsdummy-react-holavite-mfe-frontend-service

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name:  devopsdummy-laravel-holalaravel-ms-backend-service
+  namespace: devopsdummy
+  labels:
+    app:  devopsdummy
+    tecnologia: laravel
+    tipo: backend
+spec:  
+  selector:
+    app: devopsdummy
+  ports:
+  - port: 8008
+    protocol: TCP
+    targetPort: 8008
