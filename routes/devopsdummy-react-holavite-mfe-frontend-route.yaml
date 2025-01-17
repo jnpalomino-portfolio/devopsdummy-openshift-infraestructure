@@ -4,9 +4,7 @@ metadata:
   name:  devopsdummy-react-holavite-mfe-frontend-route
   namespace: devopsdummy
   labels:
-    app:  devopsdummy
-    tecnologia: react
-    tipo: frontend
+    app:  devopsdummy-react-holavite-mfe
 spec:
   host: devopsdummyholavite.apps.preprodalcaldia.medellin.gov.co
   port:

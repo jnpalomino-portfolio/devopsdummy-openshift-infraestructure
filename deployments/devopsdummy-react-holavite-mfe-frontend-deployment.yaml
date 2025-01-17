@@ -4,20 +4,16 @@ metadata:
   name:  devopsdummy-react-holavite-mfe-frontend-deployment
   namespace: devopsdummy
   labels:
-    app:  devopsdummy
-    tecnologia: react
-    tipo: frontend
+    app:  devopsdummy-react-holavite-mfe
 spec:
   selector:
     matchLabels:
-      app: devopsdummy
+      app: devopsdummy-react-holavite-mfe
   replicas: 1
   template:
     metadata:
       labels:
-        app:  devopsdummy
-        tecnologia: react
-        tipo: frontend
+        app:  devopsdummy-react-holavite-mfe
     spec:
       serviceAccountName: sa-devopsdummy
       containers:

@@ -4,12 +4,10 @@ metadata:
   name:  devopsdummy-react-holavite-mfe-frontend-service
   namespace: devopsdummy
   labels:
-    app:  devopsdummy
-    tecnologia: react
-    tipo: frontend
+    app:  devopsdummy-react-holavite-mfe
 spec:  
   selector:
-    app: devopsdummy
+    app: devopsdummy-react-holavite-mfe
   ports:
   - port: 3000
     protocol: TCP
