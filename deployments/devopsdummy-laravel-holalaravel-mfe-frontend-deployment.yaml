@@ -19,6 +19,14 @@ spec:
       containers:
       - name:  devopsdummy-laravel-holalaravel-mfe-frontend
         image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-laravel-holalaravel-mfe-frontend-preprod:latest
+        lifecycle:
+          postStart:
+            exec:
+              command:
+              - /bin/sh
+              - -c
+              - |
+                php artisan migrate --force
         readinessProbe:
           tcpSocket:
             port: 8009
