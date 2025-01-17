@@ -4,20 +4,16 @@ metadata:
   name:  devopsdummy-laravel-holalaravel-mfe-frontend-deployment
   namespace: devopsdummy
   labels:
-    app:  devopsdummy
-    tecnologia: laravel
-    tipo: frontend
+    app:  deployments/devopsdummy-laravel-holalaravel-mfe
 spec:
   selector:
     matchLabels:
-      app: devopsdummy
+      app: deployments/devopsdummy-laravel-holalaravel-mfe
   replicas: 1
   template:
     metadata:
       labels:
-        app:  devopsdummy
-        tecnologia: laravel
-        tipo: frontend
+        app:  deployments/devopsdummy-laravel-holalaravel-mfe
     spec:
       serviceAccountName: sa-devopsdummy
       containers:
@@ -25,7 +21,7 @@ spec:
         image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-laravel-holalaravel-mfe-frontend-preprod:latest
         readinessProbe:
           tcpSocket:
-            port: 8009        # Puerto de tu aplicación
+            port: 8009
           initialDelaySeconds: 60
           timeoutSeconds: 3
           periodSeconds: 10

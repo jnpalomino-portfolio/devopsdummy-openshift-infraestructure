@@ -4,12 +4,10 @@ metadata:
   name:  devopsdummy-laravel-holalaravel-mfe-frontend-service
   namespace: devopsdummy
   labels:
-    app:  devopsdummy
-    tecnologia: laravel
-    tipo: frontend
+    app:  devopsdummy-laravel-holalaravel-mfe
 spec:  
   selector:
-    app: devopsdummy
+    app: devopsdummy-laravel-holalaravel-mfe
   ports:
   - port: 8009
     protocol: TCP
