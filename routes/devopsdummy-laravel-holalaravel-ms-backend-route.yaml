@@ -4,9 +4,7 @@ metadata:
   name:  devopsdummy-laravel-holalaravel-ms-backend-route
   namespace: devopsdummy
   labels:
-    app:  devopsdummy
-    tecnologia: laravel
-    tipo: backend
+    app:  devopsdummy-laravel-holalaravel-ms
 spec:
   host: devopsdummyholalaravelms.apps.preprodalcaldia.medellin.gov.co
   port:

@@ -4,12 +4,10 @@ metadata:
   name:  devopsdummy-laravel-holalaravel-ms-backend-service
   namespace: devopsdummy
   labels:
-    app:  devopsdummy
-    tecnologia: laravel
-    tipo: backend
+    app:  devopsdummy-laravel-holalaravel-ms
 spec:  
   selector:
-    app: devopsdummy
+    app: devopsdummy-laravel-holalaravel-ms
   ports:
   - port: 8008
     protocol: TCP
