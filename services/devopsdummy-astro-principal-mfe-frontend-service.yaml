@@ -4,12 +4,10 @@ metadata:
   name:  devopsdummy-astro-principal-mfe-frontend-service
   namespace: devopsdummy
   labels:
-    app:  devopsdummy
-    tecnologia: astro
-    tipo: frontend
+    app:  devopsdummy-astro-principal-mfe
 spec:  
   selector:
-    app: devopsdummy
+    app: devopsdummy-astro-principal-mfe
   ports:
   - port: 8007
     protocol: TCP

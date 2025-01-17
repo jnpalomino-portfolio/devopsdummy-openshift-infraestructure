@@ -8,7 +8,7 @@ metadata:
     tecnologia: laravel
     tipo: backend
 spec:
-  host: devopsdummyholalaravel-ms.apps.preprodalcaldia.medellin.gov.co
+  host: devopsdummyholalaravelms.apps.preprodalcaldia.medellin.gov.co
   port:
     targetPort: 8008
   to:

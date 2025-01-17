@@ -4,11 +4,9 @@ metadata:
   name:  devopsdummy-astro-principal-mfe-frontend-route
   namespace: devopsdummy
   labels:
-    app:  devopsdummy
-    tecnologia: astro
-    tipo: frontend
+    app:  devopsdummy-astro-principal-mfe
 spec:
-  host: devopsdummyprincipal-mfe.apps.preprodalcaldia.medellin.gov.co
+  host: devopsdummyprincipal.apps.preprodalcaldia.medellin.gov.co
   port:
     targetPort: 8007
   to:
