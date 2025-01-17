@@ -13,7 +13,7 @@ spec:
   template:
     metadata:
       labels:
-        app:  devopsdummy-react-holavite-mfe
+        app: devopsdummy-react-holavite-mfe
     spec:
       serviceAccountName: sa-devopsdummy
       containers:
