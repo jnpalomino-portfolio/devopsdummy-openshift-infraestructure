@@ -12,6 +12,22 @@ trigger:
       - README.md
       - .gitignore
 
+variables:
+#=====================================================================#
+# ┌───────────────────────────────────────────────────────────────────┐
+# │                             MODIFICABLE                           │
+# ├───────────────────────────────────────────────────────────────────┤
+  - name: namespace
+    value: 'devopsdummy' # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# └───────────────────────────────────────────────────────────────────┘
+#=====================================================================#
+
+  - name: ambiente
+    ${{ if eq( variables['Build.SourceBranchName'], 'main') }}:
+      value: 'prod'
+    ${{ elseif eq( variables['Build.SourceBranchName'], 'preprod') }}:
+      value: 'preprod'
+
 resources:
   repositories:
     - repository: infraestructura
