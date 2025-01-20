@@ -17,7 +17,7 @@ resources:
     - repository: infraestructura
       type: git
       name: DevOps/devops-pipeline-openshiftApply
-      ref: ref: refs/heads/preprod
+      ref: refs/heads/preprod
 
 stages:
   - template: master-azure-pipelines.yaml@infraestructura
