@@ -7,8 +7,8 @@ metadata:
     app:  devopsdummy-react-holavite-mfe
 spec:  
   selector:
-    app: devopsdummy-react-holavite-mfe
-  ports:
+      app: devopsdummy-react-holavite-mfe
+  port:
   - port: 3000
     protocol: TCP
     targetPort: 3000
