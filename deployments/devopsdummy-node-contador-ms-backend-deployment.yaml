@@ -32,7 +32,7 @@ spec:
             memory: 2500Mi
         ports:
         - containerPort:  3000
-      env:
+        env:
         - name: NODE_ENV
           value: "production"
         - name: DB_MONGO
