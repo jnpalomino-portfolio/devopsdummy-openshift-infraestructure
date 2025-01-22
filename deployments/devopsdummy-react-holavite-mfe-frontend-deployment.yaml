@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployments
+kind: Deployment
 metadata:
   name:  devopsdummy-react-holavite-mfe-frontend-deployment
   namespace: devopsdummy
@@ -18,7 +18,7 @@ spec:
       serviceAccountName: sa-devopsdummy
       containers:
       - name:  devopsdummy-react-holavite-mfe-frontend-deployment
-        image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-react-holavite-mfe-frontend-preprod:latest
+              image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-react-holavite-mfe-frontend-preprod:latest
         resources:
           requests:
             cpu: 100m #consumo de cpu del servicio
@@ -26,5 +26,5 @@ spec:
           limits:
             cpu: 100m
             memory: 2500Mi
-        ports:
+          ports:
         - containerPort:  3000

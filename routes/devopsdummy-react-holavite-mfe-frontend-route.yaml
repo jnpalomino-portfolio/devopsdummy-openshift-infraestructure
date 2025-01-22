@@ -1,5 +1,5 @@
 apiVersion: route.openshift.io/v1
-kind: Routes
+kind: Route
 metadata:
   name:  devopsdummy-react-holavite-mfe-frontend-route
   namespace: devopsdummy
