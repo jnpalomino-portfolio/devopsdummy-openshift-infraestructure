@@ -32,3 +32,8 @@ spec:
             memory: 2500Mi
         ports:
         - containerPort:  3000
+      env:
+        - name: NODE_ENV
+          value: "production"
+        - name: DB_MONGO
+          value: "//mongodb:27017/dummy"
