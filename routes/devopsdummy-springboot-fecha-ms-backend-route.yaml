@@ -1,0 +1,14 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name:  devopsdummy-springboot-fecha-ms-backend-route
+  namespace: devopsdummy
+  labels:
+    app:  devopsdummy-springboot-fecha-ms
+spec:
+  host: devopsdummyfecha.apps.preprodalcaldia.medellin.gov.co
+  port:
+    targetPort: 8082
+  to:
+    kind: Service
+    name: devopsdummy-springboot-fecha-ms-backend-service
