@@ -1,0 +1,14 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name:  devopsdummy-springboot-saludo-ms-backend-route
+  namespace: devopsdummy
+  labels:
+    app:  devopsdummy-springboot-saludo-ms
+spec:
+  host: devopsdummysaludo.apps.preprodalcaldia.medellin.gov.co
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: devopsdummy-springboot-saludo-ms-backend-service

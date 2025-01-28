@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  devopsdummy-springboot-saludo-ms-backend-deployment
+  namespace: devopsdummy
+  labels:
+    app:  devopsdummy-springboot-saludo-ms
+spec:
+  selector:
+    matchLabels:
+      app: devopsdummy-springboot-saludo-ms
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: devopsdummy-springboot-saludo-ms
+    spec:
+      serviceAccountName: sa-devopsdummy
+      containers:
+      - name:  devopsdummy-springboot-saludo-ms-backend-deployment
+        image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-springboot-saludo-ms-backend-preprod:latest
+        resources:
+          requests:
+            cpu: 100m #consumo de cpu del servicio
+            memory: 100Mi #consumo de memory del servicio
+          limits:
+            cpu: 100m
+            memory: 2500Mi
+        ports:
+        - containerPort:  8081
