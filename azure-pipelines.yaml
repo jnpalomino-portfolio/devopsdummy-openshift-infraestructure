@@ -30,10 +30,10 @@ variables:
 
 resources:
   repositories:
-    - repository: infraestructura
+    - repository: templates
       type: git
-      name: DevOps/devops-pipeline-openshiftApply
-      ref: refs/heads/preprod
+      name: DevOps/devops-pipeline-cicd
+      ref: 'refs/heads/feature/segmentacion_templates'
 
 stages:
-  - template: master-azure-pipelines.yaml@infraestructura
+  - template: utils/openshift-applyInfra.yaml@templates
