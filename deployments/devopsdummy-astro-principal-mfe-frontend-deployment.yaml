@@ -25,7 +25,7 @@ spec:
             memory: 100Mi #consumo de memory del servicio
           limits:
             cpu: 100m
-            memory: 2500Mi
+            memory: 100Mi
         ports:
         - containerPort:  8007
         env:
