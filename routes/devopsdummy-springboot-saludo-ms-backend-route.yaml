@@ -6,7 +6,7 @@ metadata:
   labels:
     app:  devopsdummy-springboot-saludo-ms
 spec:
-  host: devopsdummysaludo.apps.preprodalcaldia.medellin.gov.co
+  host: devopsdummysaludo.apps.servicios.medellin.gov.co
   port:
     targetPort: 8081
   to:
