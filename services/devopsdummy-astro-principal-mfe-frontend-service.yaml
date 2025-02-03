@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name:  devopsdummy-astro-principal-mfe-frontend-service
+  namespace: devopsdummy
+  labels:
+    app:  devopsdummy-astro-principal-mfe
+spec:  
+  selector:
+    app: devopsdummy-astro-principal-mfe
+  ports:
+  - port: 8007
+    protocol: TCP
+    targetPort: 8007

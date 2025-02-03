@@ -1,0 +1,39 @@
+name: $(SourceBranchName)_$(Build.BuildId)
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - main
+      - preprod
+  paths:
+    exclude:
+      - deployments/*
+      - README.md
+      - .gitignore
+
+variables:
+#=====================================================================#
+# ┌───────────────────────────────────────────────────────────────────┐
+# │                             MODIFICABLE                           │
+# ├───────────────────────────────────────────────────────────────────┤
+  - name: namespace
+    value: 'devopsdummy' # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# └───────────────────────────────────────────────────────────────────┘
+#=====================================================================#
+
+  - name: ambiente
+    ${{ if eq( variables['Build.SourceBranchName'], 'main') }}:
+      value: 'prod'
+    ${{ elseif eq( variables['Build.SourceBranchName'], 'preprod') }}:
+      value: 'preprod'
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: DevOps/devops-pipeline-cicd
+      ref: 'refs/heads/feature/segmentacion_templates'
+
+stages:
+  - template: utils/openshift-applyInfra.yaml@templates

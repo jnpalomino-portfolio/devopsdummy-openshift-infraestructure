@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  devopsdummy-laravel-holalaravel-ms-backend-deployment
+  namespace: devopsdummy
+  labels:
+    app:  devopsdummy-laravel-holalaravel-ms
+spec:
+  selector:
+    matchLabels:
+      app: devopsdummy-laravel-holalaravel-ms
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app:  devopsdummy-laravel-holalaravel-ms
+    spec:
+      serviceAccountName: sa-devopsdummy
+      containers:
+      - name:  devopsdummy-laravel-holalaravel-ms-backend
+        image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-laravel-holalaravel-ms-backend-preprod:latest
+        resources:
+          requests:
+            cpu: 100m #consumo de cpu del servicio
+            memory: 100Mi #consumo de memory del servicio
+          limits:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+        - containerPort:  8008

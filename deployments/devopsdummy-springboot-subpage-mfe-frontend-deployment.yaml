@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  devopsdummy-springboot-subpage-mfe-frontend-deployment
+  namespace: devopsdummy
+  labels:
+    app:  devopsdummy-springboot-subpage-mfe
+spec:
+  selector:
+    matchLabels:
+      app: devopsdummy-springboot-subpage-mfe
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: devopsdummy-springboot-subpage-mfe
+    spec:
+      serviceAccountName: sa-devopsdummy
+      containers:
+      - name:  devopsdummy-springboot-subpage-mfe-frontend-deployment
+        image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-springboot-subpage-mfe-frontend-preprod:latest
+        resources:
+          requests:
+            cpu: 100m #consumo de cpu del servicio
+            memory: 100Mi #consumo de memory del servicio
+          limits:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+        - containerPort:  8080

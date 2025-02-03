@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  devopsdummy-node-contador-ms-backend-deployment
+  namespace: devopsdummy
+  labels:
+    app:  devopsdummy
+    tecnologia: node
+    tipo: backend
+spec:
+  selector:
+    matchLabels:
+      app: devopsdummy
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app:  devopsdummy
+        tecnologia: node
+        tipo: backend
+    spec:
+      serviceAccountName: sa-devopsdummy
+      containers:
+      - name:  devopsdummy-node-contador-ms-backend
+        image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-node-contador-ms-backend-preprod:latest
+        resources:
+          requests:
+            cpu: 100m #consumo de cpu del servicio
+            memory: 100Mi #consumo de memory del servicio
+          limits:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+        - containerPort:  3000
+        env:
+        - name: NODE_ENV
+          value: "production"
+        - name: DB_MONGO
+        valueFrom:
+          secretKeyRef:
+            name: devopsdummy-node-contador-ms-backend-secret
+            key: DB_MONGO

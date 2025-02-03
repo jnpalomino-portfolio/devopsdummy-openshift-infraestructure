@@ -1,0 +1,14 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name:  devopsdummy-springboot-subpage-mfe-frontend-route
+  namespace: devopsdummy
+  labels:
+    app:  devopsdummy-springboot-subpage-mfe
+spec:
+  host: devopsdummysubpage.apps.preprodalcaldia.medellin.gov.co
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: devopsdummy-springboot-subpage-mfe-frontend-service

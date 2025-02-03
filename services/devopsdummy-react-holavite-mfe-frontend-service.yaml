@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name:  devopsdummy-react-holavite-mfe-frontend-service
+  namespace: devopsdummy
+  labels:
+    app:  devopsdummy-react-holavite-mfe
+spec:  
+  selector:
+    app: devopsdummy-react-holavite-mfe
+  ports:
+  - port: 3000
+    protocol: TCP
+    targetPort: 3000
