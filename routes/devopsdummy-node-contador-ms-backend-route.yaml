@@ -8,7 +8,7 @@ metadata:
     tecnologia: node
     tipo: backend
 spec:
-  host: devopsdummycontador.apps.preprodalcaldia.medellin.gov.co
+  host: devopsdummycontador.apps.servicios.medellin.gov.co
   port:
     targetPort: 3000
   to:

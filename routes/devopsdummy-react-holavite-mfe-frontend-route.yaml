@@ -6,7 +6,7 @@ metadata:
   labels:
     app:  devopsdummy-react-holavite-mfe
 spec:
-  host: devopsdummyholavite.apps.preprodalcaldia.medellin.gov.co
+  host: devopsdummyholavite.apps.servicios.medellin.gov.co
   port:
     targetPort: 3000
   to:

@@ -6,7 +6,7 @@ metadata:
   labels:
     app:  devopsdummy-springboot-fecha-ms
 spec:
-  host: devopsdummyfecha.apps.preprodalcaldia.medellin.gov.co
+  host: devopsdummyfecha.apps.servicios.medellin.gov.co
   port:
     targetPort: 8082
   to:
