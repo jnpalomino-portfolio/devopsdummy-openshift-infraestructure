@@ -21,10 +21,10 @@ spec:
         image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-react-holavite-mfe-frontend-preprod:latest
         resources:
           requests:
-            cpu: 100m #consumo de cpu del servicio
-            memory: 100Mi #consumo de memory del servicio
+            cpu: 35m #consumo de cpu del servicio
+            memory: 30Mi #consumo de memory del servicio
           limits:
-            cpu: 100m
-            memory: 100Mi
+            cpu: 35m
+            memory: 30Mi
         ports:
         - containerPort:  3000
