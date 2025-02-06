@@ -21,11 +21,11 @@ spec:
         image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-astro-principal-mfe-frontend-preprod:latest
         resources:
           requests:
-            cpu: 100m #consumo de cpu del servicio
-            memory: 100Mi #consumo de memory del servicio
+            cpu: 20m #consumo de cpu del servicio
+            memory: 20Mi #consumo de memory del servicio
           limits:
-            cpu: 100m
-            memory: 100Mi
+            cpu: 20m
+            memory: 20Mi
         ports:
         - containerPort:  8007
         env:
