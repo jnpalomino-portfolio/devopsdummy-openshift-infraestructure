@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: devopsdummy-springboot-saludo-ms-backend-config
+  namespace: devopsdummy
+  labels:
+    app: devopsdummy
+    tecnologia: springboot
+    tipo: backend
+data:
+  APP_CONFIG_TEST: "valor_de_prueba"
