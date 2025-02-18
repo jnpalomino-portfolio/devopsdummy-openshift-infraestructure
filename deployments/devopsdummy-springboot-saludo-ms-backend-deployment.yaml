@@ -21,10 +21,10 @@ spec:
         image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-springboot-saludo-ms-backend-preprod:latest
         resources:
           requests:
-            cpu: 100m #consumo de cpu del servicio
-            memory: 100Mi #consumo de memory del servicio
+            cpu: 40m #consumo de cpu del servicio
+            memory: 200Mi #consumo de memory del servicio
           limits:
-            cpu: 100m
-            memory: 100Mi
+            cpu: 40m
+            memory: 200Mi
         ports:
         - containerPort:  8081
