@@ -22,7 +22,7 @@ spec:
       serviceAccountName: sa-devopsdummy
       containers:
       - name:  devopsdummy-node-contador-ms-backend
-        image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-node-contador-ms-backend-preprod:latest
+        image:  alcaldiadevopsdummy.azurecr.io/devopsdummy-node-contador-ms-backend-preprod:74596
         resources:
           requests:
             cpu: 100m #consumo de cpu del servicio
@@ -36,7 +36,7 @@ spec:
         - name: NODE_ENV
           value: "production"
         - name: DB_MONGO
-        valueFrom:
-          secretKeyRef:
-            name: devopsdummy-node-contador-ms-backend-secret
-            key: DB_MONGO
+          valueFrom:
+            secretKeyRef:
+              name: devopsdummy-node-contador-ms-backend-secret
+              key: DB_MONGO
